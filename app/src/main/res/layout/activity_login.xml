@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="80dp"
-                
+
                 android:background="@color/colorPrimary"
                 android:drawableStart="@drawable/id_image"
                 android:drawableLeft="@drawable/id_image"
