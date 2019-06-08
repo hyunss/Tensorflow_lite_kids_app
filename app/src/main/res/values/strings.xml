@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">what`s this? </string>
+    <string name="id_text">ID</string>
+    <string name="password_text">Password</string>
+    <string name="name_text">Name</string>
+    <string name="phonnumber_text">PhonNumber</string>
+    <string name="Join">가입하기</string>
+    <string name="facebook_app_id">293648048192665</string>
+    <string name="fb_login_protocol_scheme">fb293648048192665</string>
+    <string name="kakao_key"> a19a8101fb9a48a993563242b54cc7a8</string>
+    <string name="capture_and_detect">Capture and Detect</string>
+    <string name="choose_classifier">Choose classifier</string>
+    <string name="details">Detected details will go here</string>
+    <string name="select_classifier">Select Classifier:</string>
+    <string name="image_preview">Image Preview</string>
+</resources>
