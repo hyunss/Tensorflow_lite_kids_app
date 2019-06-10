@@ -29,9 +29,8 @@ public class WordlistActivity extends AppCompatActivity {
 
         word.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView parent, View view, int position, long id) {
                 Intent i = new Intent(getApplicationContext(), DictionaryActivity.class);
-                i.putExtra("words",(String)parent.getAdapter().getItem(position));
                 startActivity(i);
             }
         });

@@ -67,7 +67,7 @@ public class MypageActivity extends AppCompatActivity {
         resetpw_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent reset_intent = new Intent(MypageActivity.this, FindpwActivity.class);
+                Intent reset_intent = new Intent(MypageActivity.this, ChangePassActivity.class);
                 MypageActivity.this.startActivity(reset_intent);
 
             }

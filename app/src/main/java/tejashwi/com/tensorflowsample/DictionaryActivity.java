@@ -25,7 +25,6 @@ public class DictionaryActivity extends AppCompatActivity {
     String url;
     private TextView showDef;
     private EditText enterWord;
-    private String findwords="";
     private String word="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,19 +33,14 @@ public class DictionaryActivity extends AppCompatActivity {
 
         showDef = (TextView)findViewById (R.id.showDef);
         enterWord = (EditText) findViewById (R.id.enterWord);
-        Intent intent = new Intent();
-        findwords = intent.getStringExtra("words");
     }
 
     private String dictionaryEntries() {
         final String language = "en-gb";
 
-        if(enterWord.equals("")){
-            word = findwords;
-        }
-        else {
+
             word = enterWord.getText().toString();
-        }
+
         //now we will get the meaning of word entered in edittext
         final String fields = "definitions";//replace with whatever field you want
         final String strictMatch = "false";

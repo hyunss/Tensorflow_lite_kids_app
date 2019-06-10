@@ -325,7 +325,7 @@ public class ObjectActivity extends AppCompatActivity implements View.OnClickLis
                                             //
                                             if(text3.equals("")){
                                                 AlertDialog.Builder builder = new AlertDialog.Builder(ObjectActivity.this);
-                                                builder.setMessage("아이디를 입력해주세요.")
+                                                builder.setMessage("사진을 찍어주세요.")
                                                         .setPositiveButton("확인", null)
                                                         .create()
                                                         .show();

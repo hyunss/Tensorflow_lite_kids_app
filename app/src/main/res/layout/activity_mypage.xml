@@ -9,9 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBackground"
+        android:background="@color/background"
         android:orientation="vertical">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,139 +34,154 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"
-                android:text=" I D : "
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/myIDMessage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="사용자아이디"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"
-                android:text="NAME: "
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/myName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="userName"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:background="@color/colorPrimaryDark"
             android:gravity="center"
+            android:padding="10dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Email: "
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical|center_horizontal"
+                app:srcCompat="@drawable/profile"
+                tools:ignore="VectorDrawableCompat" />
 
-            <TextView
-                android:id="@+id/mypageEmail"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="userEmail"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:gravity="left">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text=" I D :"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/myIDMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="사용자아이디"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_marginRight="10sp"
+                        android:text="NAME:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/myName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:text="userName"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:text="Email:"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/mypageEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:text="userEmail"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="150dp"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical"
+            >
 
-            <Button
-                android:id="@+id/ResetPw_button"
-                android:layout_width="110dp"
-                android:layout_height="60dp"
-                android:layout_marginRight="20dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="Password Change"
-                android:textColor="#ffffff" />
+            //저장 단어 목록
 
             <Button
                 android:id="@+id/userwordlist"
-                android:layout_width="110dp"
-                android:layout_height="60dp"
-                android:layout_marginRight="20dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="Confim word"
-                android:textColor="#ffffff" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="#00FF0000"
+                android:text="> stored words List"
+                android:textColor="#000000" />
 
+            //PW변경
+            <Button
+                android:id="@+id/ResetPw_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="#00FF0000"
+                android:text="> Password Change"
+                android:textColor="#000000" />
+
+            //회원 탈퇴
             <Button
                 android:id="@+id/withdrawal_button"
-                android:layout_width="110dp"
-                android:layout_height="60dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="Membership with drawal"
-                android:textColor="#ffffff" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="#00FF0000"
+                android:text="> Membership Withdrawal"
+                android:textColor="#000000" />
 
+            //로그아웃
             <Button
                 android:id="@+id/Logout_Button"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/colorPrimaryDark"
-                android:text="LOG OUT"
-                android:textColor="#ffffff"
-                android:textSize="40dp" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:background="#00FF0000"
+                android:text="> LOG OUT"
+                android:textColor="#000000" />
         </LinearLayout>
+
     </LinearLayout>
+
 </LinearLayout>

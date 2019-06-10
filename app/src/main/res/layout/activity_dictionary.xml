@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/colorBackground"
+        android:background="@color/background"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
@@ -38,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <EditText
@@ -48,7 +49,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/round_shape"
                 android:drawableStart="@drawable/search_image"
                 android:drawableLeft="@drawable/search_image"
                 android:hint=" Write Word here. . . "
@@ -63,7 +64,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/colorPrimaryDark"
+                android:background="@drawable/round_shape2"
                 android:text="FIND"
                 android:textColor="#FFFFFF"
                 android:textSize="15dp"

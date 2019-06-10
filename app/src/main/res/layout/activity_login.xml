@@ -16,15 +16,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="150sp"
 
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="200dp"
-                android:layout_height="25dp"
+                android:layout_width="200sp"
+                android:layout_height="25sp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="20sp"
 
                 />
 
@@ -32,10 +32,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="10sp"
                 android:text=""
                 android:textColor="#E05D16"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -44,7 +44,7 @@
                 android:layout_gravity="center"
                 android:text=""
                 android:textColor="#E05D16"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -56,45 +56,45 @@
 
             <EditText
                 android:id="@+id/id"
-                android:layout_width="280dp"
+                android:layout_width="280sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="80sp"
 
-                android:background="@color/colorPrimary"
+                android:background="@drawable/round_shape"
                 android:drawableStart="@drawable/id_image"
                 android:drawableLeft="@drawable/id_image"
                 android:hint=" ID"
-                android:padding="10dp"
+                android:padding="10sp"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff" />
 
             <EditText
                 android:id="@+id/password"
-                android:layout_width="280dp"
+                android:layout_width="280sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorPrimary"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/round_shape"
                 android:drawableStart="@drawable/pw_image"
                 android:drawableLeft="@drawable/pw_image"
                 android:hint=" PW"
                 android:inputType="textPassword"
-                android:padding="10dp"
+                android:padding="10sp"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff" />
 
             <Button
                 android:id="@+id/mainLoginButton"
-                android:layout_width="130dp"
+                android:layout_width="130sp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
 
-                android:background="@color/colorPrimaryDark"
+                android:background="@drawable/round_shape2"
                 android:text="LOGIN"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -102,9 +102,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="10sp"
                 android:text="JOIN"
-                android:textSize="18dp" />
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -117,10 +117,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="10sp"
                     android:text="Find ID"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -136,11 +136,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="10sp"
                     android:text="Find PW"
-                    android:textSize="18dp" />
-
+                    android:textSize="18sp" />
 
             </LinearLayout>
 

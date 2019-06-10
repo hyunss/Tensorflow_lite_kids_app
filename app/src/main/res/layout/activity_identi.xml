@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBackground"
+        android:background="@color/background"
         android:orientation="vertical">
 
 
@@ -33,7 +33,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="100dp"
             android:orientation="vertical"
             android:gravity="center">
 
@@ -44,7 +44,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="10dp"
                 android:text=" Enter authentication number."
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textSize="20dp"
                 android:textStyle="bold" />
             <LinearLayout
@@ -59,7 +59,8 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="15dp"
-                    android:background="@color/colorPrimary"
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/round_shape"
                     android:hint="authentication number"
                     android:inputType="text"
                     android:padding="10dp"
@@ -68,11 +69,12 @@
 
                 <Button
                     android:id="@+id/emailAuth_btn"
-                    android:layout_width="80dp"
+                    android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/round_shape2"
                     android:text="OK"
                     android:textColor="#FFFFFF"
                     android:textSize="15dp"
