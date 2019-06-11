@@ -19,7 +19,7 @@
 
 ## App 적용 주 기능  
 
-* android studio TTs  
+* android studio TTS  
 * dictionary  
 * Tensorflow lite, Mobilenet 및 lnception 모델   
 * 카메라 2 API를 사용하여 모바일 카메라 및 이미지 캡처와 상호 작용을 통해 이미지 인식  
@@ -39,7 +39,7 @@
 
 ## Database 연동  
 
-* 안드로이드 스튜디오와 DB를 바로 연결 할 수 없기 때문에 PPHP파일을 사용하여 안드로이드 스튜디오와 디비를 연결합니다.
+* 안드로이드 스튜디오와 DB를 바로 연결 할 수 없기 때문에 PHP파일을 사용하여 안드로이드 스튜디오와 DB를 연결합니다.
 * Register.php는 회원가입에 필요한 정보들을 데이터베이스에 저장합니다.  
 * UserValidate.php는 아이디 중복을 확인합니다.  
 * Login.php는 입력된 아이디와 비밀번호가 회원테이블에 존재하는지 확인후 로그인합니다.  
