@@ -35,7 +35,7 @@
 
 * Tensorflow lite는 Mobile, Embedded device와 같이 한정 된 자원을 갖는 디바이스에서 on-device learning을 하기 위한 경량화 된 솔루션이다. 짧은 대기 시간과 작은 바이너리 크기로 디바이스 내에서 기계학습 유추가 가능합니다.  
 * TTS(Text to speech)는 컴퓨터 프로그램을 통해 텍스트를 음성으로 읽어 주는 것 입니다.  
-* Tensorflow Lite와 TTS는 APP 기능 중 하나인 Detection에 사용 됩니다. Detection에서 모바일 카메라로 사물을 인식하고 캡처를 하면 캡처 된 이미지가 Bitmap 형태로 Classifirer에 전달해 분류 됩니다. 그 후 분류된 이미지를 Tensorflow Lite에 통해 인식하고, 사물의 텍스트를 사용자에게 전달해 줍니다. 그 후 TTS는 사물의 텍스트를 음성으로 읽어 줍니다.  
+* Tensorflow Lite와 TTS는 APP 기능 중 하나인 Detection에 사용 됩니다. Detection에서 모바일 카메라로 사물을 인식하고 캡처를 하면 캡처 된 이미지가 Bitmap 형태로 Classifirer에 전달해 분류 됩니다. 그 후 분류된 이미지를 Tensorflow Lite 통해 인식하고, 사물의 텍스트를 사용자에게 전달해 줍니다. 그 후 TTS는 사물의 텍스트를 음성으로 읽어 줍니다.  
 
 ## Database 연동  
 
