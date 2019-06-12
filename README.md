@@ -90,14 +90,40 @@
   ![7](https://user-images.githubusercontent.com/48505700/59357601-1a5d1800-8d66-11e9-814b-694779eeb951.jpg)     
   ![8](https://user-images.githubusercontent.com/48505700/59357618-20eb8f80-8d66-11e9-9f3b-ba8447ced251.jpg)  
     
-    
-   
+ 
 ## Tensorflow lite와 TTS  
 
-* Tensorflow lite는 Mobile, Embedded device와 같이 한정 된 자원을 갖는 디바이스에서 on-device learning을 하기 위한 경량화 된 솔루션이다. 짧은 대기 시간과 작은 바이너리 크기로 디바이스 내에서 기계학습 유추가 가능합니다.  
-* TTS(Text to speech)는 컴퓨터 프로그램을 통해 텍스트를 음성으로 읽어 주는 것 입니다.  
-* Tensorflow Lite와 TTS는 APP 기능 중 하나인 Detection에 사용 됩니다. Detection에서 모바일 카메라로 사물을 인식하고 캡처를 하면 캡처 된 이미지가 Bitmap 형태로 Classifirer에 전달해 분류 됩니다. 그 후 분류된 이미지를 Tensorflow Lite 통해 인식하고, 사물의 텍스트를 사용자에게 전달해 줍니다. 그 후 TTS는 사물의 텍스트를 음성으로 읽어 줍니다.  
-
+* Tensorflow lite는 Mobile, Embedded device와 같이 한정 된 자원을 갖는 디바이스에서 on-device learning을 하기 위한 경량화 된 솔루션이다. 짧은 대기 시간과 작은 바이너리 크기로 디바이스 내에서 기계학습 유추가 가능합니다.    
+* 이미지를 bitmap 형태로 변환하여 classifier.recognizeImage에 전달해 인식 결과를 저장합니다.  
+ 그 후 결과를 String형으로 변환해 결과창에 출력합니다.  
+   
+![1](https://user-images.githubusercontent.com/48505700/59358999-893b7080-8d68-11e9-8219-239748e4f288.jpg)  
+  
+ 이미지 인식 메소드 안에 TTS변환 버튼의 onclicklistener를 달아 버튼 클릭시 음성 변환이 가능하게 합니다.  
+   
+ ![2](https://user-images.githubusercontent.com/48505700/59359010-90fb1500-8d68-11e9-8249-9a4a1096b721.jpg)  
+   
+ 마지막으로 uiThread를 통해 카메라 미리보기와 인식 결과를 띄워줍니다.  
+     
+![3](https://user-images.githubusercontent.com/48505700/59359018-95273280-8d68-11e9-8a15-e3772684a72e.jpg)  
+  
+  ondestroy에서 카메라와 background에서 진행하던 카메라, tensorflow 모두 실행 중지 시켜주고, TTS 또한 실행 중지 시켜 앱 실행을 멈춘 후에도 다시 TTS가 실행 될 수 있게 합니다.  
+ ![4](https://user-images.githubusercontent.com/48505700/59359028-99535000-8d68-11e9-87c0-9b434cd56e30.jpg)  
+      
+ * TTS  
+ TTS(Text to Speech)  
+음성합성 시스템 : 컴퓨터의 프로그램을 통해 사람의 목소리를 구현해내는 것입니다.  
+TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음성으로 활용 합니다.  
+![5](https://user-images.githubusercontent.com/48505700/59359046-9f493100-8d68-11e9-95c0-e8cae643b6d7.jpg)  
+  
+ * oncreate()에 TTS실행을 위한 기본 속성을 설정합니다. (ex. 읽는 속도, 언어)    
+   
+ ![6](https://user-images.githubusercontent.com/48505700/59359070-a708d580-8d68-11e9-9c88-4d03cda1cea9.jpg)  
+   
+ android SDK 버전에 따른 구분을 주어 오류를 제어합니다.  
+ ![7](https://user-images.githubusercontent.com/48505700/59359078-abcd8980-8d68-11e9-8707-7ac309d42b14.jpg)  
+   
+   
 ## Database 연동  
 
 * 안드로이드 스튜디오와 DB를 바로 연결 할 수 없기 때문에 PHP파일을 사용하여 안드로이드 스튜디오와 DB를 연결합니다.
