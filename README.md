@@ -16,6 +16,22 @@
 [Download link] (http://developer.android.com/studio/index.html)  
 * Api level: 22 이상  
 * 안드로이드 기기에서 카메라와 사진, 스피커의 접근성 허용  
+* 서버 구축   
+![1](https://user-images.githubusercontent.com/48505700/59361264-880c4280-8d6c-11e9-80e7-0749c1c4ecb0.JPG)  
+  cafe24에서 호스팅된 서버를 이용한다.  
+* 서버 관리 bitvise 설치  
+  [Download link] (https://www.bitvise.com/ssh-client-download)  
+  설치방법:  
+   [Download link] (https://blog.naver.com/PostView.nhn?blogId=harry5313&logNo=221429902704&categoryNo=0&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView)  
+   ![2](https://user-images.githubusercontent.com/48505700/59361273-8c386000-8d6c-11e9-8bd9-6347dd759b3c.JPG)  
+     
+ * 서버 php파일관리  
+   sublime text설치 및 사용  
+    [Download link] (https://www.sublimetext.com/3)  
+    - sublime text는 php파일 편집 및 작성하는데 사용됩니다.  
+    - php파일과 안드로이드 스튜디오 코드 회원가입코드  
+ 
+
 
 ## App 적용 주 기능  
 
@@ -41,6 +57,8 @@
 직접 사용자 데이터를 업로드 해 학습을 하여, 내 시나리오에 맞는 Object Detection System을 손쉽게 만들 수 있습니다.  
 
 ![co](https://user-images.githubusercontent.com/48505700/59355648-54c4b600-8d62-11e9-9b11-64ec2c4f1e4f.jpg)  
+  
+  
 ## Tensorflow 구현  
 
 * Executor thread 사용  
@@ -57,10 +75,14 @@
 7. Executor Service가 멈추면 모든 쓰레드도 중지합니다.  
   
 * asset폴더에 있는 tensorflow lite 라이브러리 변수에 정의합니다.  
+  
+  
 ![1](https://user-images.githubusercontent.com/48505700/59356550-031d2b00-8d64-11e9-9bde-57015725fb65.jpg)  
 ![2](https://user-images.githubusercontent.com/48505700/59356569-0a443900-8d64-11e9-9590-fb6107fb2540.jpg)  
   
  미리 정의 한 excutor thread를 run하여 Classifier에 tensorflow 모델 전달 합니다.  
+   
+   
  ![3](https://user-images.githubusercontent.com/48505700/59356575-0fa18380-8d64-11e9-8073-8bc6942347ab.jpg)  
    
 분류가 완료 되었을 시 Claasifier를 닫습니다.  
@@ -78,13 +100,20 @@
   TextureView가 사용이 가능하다면 카메라를 켜는 기능입니다.  
   
   camera2의 여러 클래스  
+    
+    
   ![3](https://user-images.githubusercontent.com/48505700/59357543-00233a00-8d66-11e9-952a-dc9e9f0b0aef.jpg)  
+    
+    
   카메라를 켜기 위해 OpenCamera를 사용했습니다.  
+        
   ![4](https://user-images.githubusercontent.com/48505700/59357558-06b1b180-8d66-11e9-975a-54366fb805cb.jpg)  
   
   CameraDevice는 카메라 기기를 나타내고 CameraManager는 카메라의 기능을 시키는 요소입니다.  
     
-  캡쳐 버튼에 inclick을 통해 takePicture method를 실행합니다.    
+  캡쳐 버튼에 inclick을 통해 takePicture method를 실행합니다.  
+    
+    
   ![5](https://user-images.githubusercontent.com/48505700/59357571-0ca79280-8d66-11e9-9346-b2c1e078f316.jpg)    
   ![6](https://user-images.githubusercontent.com/48505700/59357595-14673700-8d66-11e9-90ec-710c98c87f97.jpg)  
   ![7](https://user-images.githubusercontent.com/48505700/59357601-1a5d1800-8d66-11e9-814b-694779eeb951.jpg)     
@@ -108,15 +137,18 @@
 ![3](https://user-images.githubusercontent.com/48505700/59359018-95273280-8d68-11e9-8a15-e3772684a72e.jpg)  
   
   ondestroy에서 카메라와 background에서 진행하던 카메라, tensorflow 모두 실행 중지 시켜주고, TTS 또한 실행 중지 시켜 앱 실행을 멈춘 후에도 다시 TTS가 실행 될 수 있게 합니다.  
+    
+    
  ![4](https://user-images.githubusercontent.com/48505700/59359028-99535000-8d68-11e9-87c0-9b434cd56e30.jpg)  
       
  * TTS  
  TTS(Text to Speech)  
 음성합성 시스템 : 컴퓨터의 프로그램을 통해 사람의 목소리를 구현해내는 것입니다.  
 TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음성으로 활용 합니다.  
-![5](https://user-images.githubusercontent.com/48505700/59359046-9f493100-8d68-11e9-95c0-e8cae643b6d7.jpg)  
   
- * oncreate()에 TTS실행을 위한 기본 속성을 설정합니다. (ex. 읽는 속도, 언어)    
+ ![5](https://user-images.githubusercontent.com/48505700/59359046-9f493100-8d68-11e9-95c0-e8cae643b6d7.jpg)  
+  
+ oncreate()에 TTS실행을 위한 기본 속성을 설정합니다. (ex. 읽는 속도, 언어)    
    
  ![6](https://user-images.githubusercontent.com/48505700/59359070-a708d580-8d68-11e9-9c88-4d03cda1cea9.jpg)  
    
@@ -128,15 +160,128 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
 
 * 안드로이드 스튜디오와 DB를 바로 연결 할 수 없기 때문에 PHP파일을 사용하여 안드로이드 스튜디오와 DB를 연결합니다.
 * Register.php는 회원가입에 필요한 정보들을 데이터베이스에 저장합니다.  
+  
+  registerButton 부분  
+  ![3](https://user-images.githubusercontent.com/48505700/59361279-9195aa80-8d6c-11e9-8b1a-3d08d760655d.JPG)  
+    
+   RegisterRequest 코드  
+   ![4](https://user-images.githubusercontent.com/48505700/59361301-98bcb880-8d6c-11e9-8449-8b5ac9bd210d.JPG)  
+     
+   Register.php 코드  
+   ![5](https://user-images.githubusercontent.com/48505700/59361309-9d816c80-8d6c-11e9-9c10-69a22138931c.JPG)  
+     
+     
 * UserValidate.php는 아이디 중복을 확인합니다.  
 * Login.php는 입력된 아이디와 비밀번호가 회원테이블에 존재하는지 확인후 로그인합니다.  
+  
+  Login.php  
+  
+  ![12](https://user-images.githubusercontent.com/48505700/59361410-c3a70c80-8d6c-11e9-9b46-0021755181eb.JPG)  
+    
+안드로이드에서 POST방식으로 받아온 아이디와 비밀번호 값을 SQL문을 이용해 PHP에서 회원인지 아닌지 검사하고 TRUE값을 안드로이드로 전송합니다.  
+  ## 자동로그인  
+  * SharedPreferences는 DB를 사용하기 애매한 경우에 유용한 API.  
+  * LoginActivity에서 조건문을 주어 SharedPreferences에 일정한 값이 저장되어있으면 MenuActivity로 이동합니다.  
+  * 처음에는 SharedPreferences에 어떤 정보도 없으므로 값을 저장할 키들을 생성합니다.  
+  * getString(）의 첫 번째 인자는 저장될 키, 두 번째 인자는 값 입니다.  
+  * 키는 원하는 것으로 설정하고, 값은 null을 줍니다.  
+    
+    
+       SharedPreferences auto = getSharedPreferences("auto ", Activity .MODE_PRIVATE );  
+       loginID = auto .getString("inputID ", null );  
+       loginPW = auto .getString("inputPW ", null );  
+       
+  * LoginActivity로 들어왔을 때 loginID와 loginPW값을 가져와서 null이 아니면 (첫 로그인이 아닌 경우) 자동 로그인이 되어 MenuActivity가 실행됩니다.  
+    
+    
+     if (loginID !=null &&loginPW !=null ){
+                 Toast.makeText(LoginActivity　.this, LoginID + "님 자동로그인입니다.",)Toast
+    .LENGTH_SHORT).show();
+	     Intent intent =new Intent (LoginActivity .this ,MenuActivity .class);
+	     intent .putExtra("userID ", loginID);
+	     startActivity(intent);
+	     finish();
+   }  
+     
+ * loginID값과 loginPW값이 둘 다 null인 경우(최초 로그인) SharedPreferences.Editor를 통해 auto의 loginID와 loginPW에 값을 저장합니다.  
+   이때 저장된 loginID값과 loginPW값으로 앱을 재실행 시 자동로그인이 구현됩니다.  
+     
+     
+
+   if (loginID ==null && loginPW ==null ) {
+	             SharedPreferences auto = getSharedPreferences("auto ", Activity .MODE_PRIVATE );
+	             SharedPreferences .Editor autoLogin = auto .edit();
+	             autoLogin .putString("inputID ", idText .getText().toString());
+	             autoLogin .putString("inputPW ", passwordText .getText().toString());
+	             autoLogin .commit();
+	             Toast .makeText(LoginActivity .this , idText .getText().toString() +"님 환영합니다.", Toast
+       .LENGTH_SHORT ).show();
+	             Intent intent =new Intent (LoginActivity .this , MenuActivity .class);
+	             startActivity(intent);
+	             finish();
+  }  
+    
+  ## 로그아웃  
+    
+ * 로그아웃 버튼을 클릭하면 SharedPreferences에 저장된 정보를 삭제하기 위해 SharedPreferences를 LoginActivity에서 만든 이름으로 불러온다. 
+ * editor.clear()를 사용해 auto에 들어있는 모든 정보를 기기에서 지운다.  
+ * Intent를 사용해 LoginActivity로 돌아간다.  
+    
+    
+  logout_btn .setOnClickListener(new View .OnClickListener () {
+	            @Override
+            	public void onClick (View v ) {
+                    		Intent i =new Intent (MypageActivity .this , LoginActivity .class);
+	                    	startActivity(i);
+		                    SharedPreferences auto = getSharedPreferences("auto ", Activity .MODE_PRIVATE 
+                 );
+	                    	SharedPreferences .Editor editor = auto .edit();
+	              	editor .clear();
+	              	editor .commit();
+	              	Toast .makeText(MypageActivity .this , "로그아웃 ", Toast .LENGTH_SHORT ).show();
+		finish();
+	}  
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
 * Identi_ID.php는 회원가입 당시 입력했던 이메일이 회원테이블에 존재하는 확인하고 존재한다면 해당 이메일에 회원의 아이디를 전송합니다.  
 * Identification.php는 입력받은 아이디를 회원테이블에서 확인후 값이 존재하면 해당 아이디 회원의 이메일주소로 인증번호를 전송합니다.  
+  
+  
+  이메일로 인증번호 보내는 코드  
+  ![8](https://user-images.githubusercontent.com/48505700/59361352-b12cd300-8d6c-11e9-8215-d0d9f9fc2a38.JPG)  
+  ![9](https://user-images.githubusercontent.com/48505700/59361371-b558f080-8d6c-11e9-920f-e4809b632f8a.JPG)  
+    
+   Identification.php파일 (이메일 인증코드)  
+   ![10](https://user-images.githubusercontent.com/48505700/59361384-b9850e00-8d6c-11e9-9cfd-018dbcb41ba2.JPG)  
+     
+   인증번호 메일 받은 결과  
+   ![11](https://user-images.githubusercontent.com/48505700/59361392-bdb12b80-8d6c-11e9-9129-3fcaffe1ab92.JPG)  
+      
+      
 * passwordChange.php는 회원의 비밀번호를 변경하는데 사용합니다.  
 * withdraw.php는 회원탈퇴 기능을 구현합니다.  
 * getjson.php는 마이페이지에 로그인된 회원의 아이디, 이름, 이메일을 출력할 때 Database에서 안드로이드로 데이터값들을 가져옵니다.  
 * SaveWords.php는 인식된 단어를 로그인된 아이디와 함께 USER_WORD테이블에 저장합니다.  
-* fetchWord.php는 회원이 저장한 단어들을 안드로이드로 전송합니다.
+* fetchWord.php는 회원이 저장한 단어들을 안드로이드로 전송합니다.  
+  
+  
+  단어가져오는 getData()메소드  
+  ![6](https://user-images.githubusercontent.com/48505700/59361319-a2deb700-8d6c-11e9-9508-eaa2d7f0e220.JPG)  
+    
+  단어가져오는 fetchWord코드  
+  ![7](https://user-images.githubusercontent.com/48505700/59361338-ac681f00-8d6c-11e9-8e7d-203909bace18.JPG)  
+    
+    
 
 ## 어플사용  
 
