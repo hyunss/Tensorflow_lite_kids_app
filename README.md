@@ -40,6 +40,13 @@
 머신러닝이나 텐서플로우에 대한 개념이 없더라도 라이브러리 형태로 손쉽게 사용할 수 있습니다.  
 직접 사용자 데이터를 업로드 해 학습을 하여, 내 시나리오에 맞는 Object Detection System을 손쉽게 만들 수 있습니다.  
 
+![co](https://user-images.githubusercontent.com/48505700/59355648-54c4b600-8d62-11e9-9b11-64ec2c4f1e4f.jpg)  
+## Tensorflow 구현  
+
+* Executor thread 사용  
+
+
+
 ## Tensorflow lite와 TTS  
 
 * Tensorflow lite는 Mobile, Embedded device와 같이 한정 된 자원을 갖는 디바이스에서 on-device learning을 하기 위한 경량화 된 솔루션이다. 짧은 대기 시간과 작은 바이너리 크기로 디바이스 내에서 기계학습 유추가 가능합니다.  
