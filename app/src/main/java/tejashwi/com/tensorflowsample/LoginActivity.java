@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity{
 
 
 
-        //황연진
+        
 
         SharedPreferences auto = getSharedPreferences("auto", Activity.MODE_PRIVATE);
         loginID = auto.getString("inputID", null);
@@ -87,20 +87,18 @@ public class LoginActivity extends AppCompatActivity{
                                 } else {
                                     //
                                     if (success) {
-                                        //황연
+                                       
                                         if (loginID == null && loginPW == null) {
-                                            //황연진
+                                            
                                             SharedPreferences auto = getSharedPreferences("auto", Activity.MODE_PRIVATE);
                                             SharedPreferences.Editor autoLogin = auto.edit();
                                             autoLogin.putString("inputID", idText.getText().toString());
                                             autoLogin.putString("inputPW", passwordText.getText().toString());
                                             autoLogin.commit();
                                             Toast.makeText(LoginActivity.this, idText.getText().toString() + "님 환영합니다.", Toast.LENGTH_SHORT).show();
-                                            //황연진
+                                            
                                             String userID = jsonResponse.getString("userID");
-                                            //유준영 JSONArray ArrayEmail = new JSONArray(jsonResponse.getString("userEmail"));
-                                            //유준영 String userID = ArrayEmail.getJSONObject(0).getString("userEmail");
-
+                                            
                                             Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                                             intent.putExtra("userID", userID);
                                             startActivity(intent);
@@ -144,7 +142,7 @@ public class LoginActivity extends AppCompatActivity{
             }
         });
 
-        findpwButton.setOnClickListener(new OnClickListener(){ //회원가입 버튼
+        findpwButton.setOnClickListener(new OnClickListener(){ 
             @Override
             public void onClick(View v) {
                 Intent pwIntent = new Intent(LoginActivity.this, FindpwActivity.class);
