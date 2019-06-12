@@ -7,6 +7,11 @@
 따라서 이 어플의 목적은 아이의 부모가 단어를 한 번 알려주고 그치는 것이 아니라 그 단어를 저장하여 나중에 몰랐던 단어를 부모와 함께 찾아보며 공부를  할 수 있도록 도와주는 것입니다.  
 또, 처음 사용법을 익히고 나면 나중에 아이 혼자 사진을 찍어 음성으로 들을 수 있도록 하여 흥미롭게 단어를 익힐 수 있도록 하였습니다.  
 
+* 선정 배경 및 목적 
+현재 모바일 퍼스트 시대에서 모바일 온리 시대가 도래 하고 있습니다. 그만큼 최근 10여년 동안 모바일 기술이 급속도로 발전해왔고, 주 사용 연령층 또한 광범위 해져 가고 있습니다.  
+따라서, 광범위 해진 연령층에 일부인 유아들에게 교육을 흥미롭게 하는 도움을 주자하는 생각에서 주제를 선정하였습니다.
+
+
 * App 사용 대상: 언어를 배우는 4-6세 아이들 및 어린 아이들의 부모 
 
 ## 다운로드 받기 전 필요한 부분  
@@ -18,7 +23,7 @@
 * 안드로이드 기기에서 카메라와 사진, 스피커의 접근성 허용  
 * 서버 구축   
 ![1](https://user-images.githubusercontent.com/48505700/59361264-880c4280-8d6c-11e9-80e7-0749c1c4ecb0.JPG)  
-  cafe24에서 호스팅된 서버를 이용한다.  
+  cafe24에서 호스팅된 서버를 이용합.  
 * 서버 관리 bitvise 설치  
   [Download link] (https://www.bitvise.com/ssh-client-download)  
   설치방법:  
@@ -95,27 +100,29 @@
  oncreate 함수에서 Manifest파일에 camera permission이 허용되어 있는 지 확인 후  
    
  ![1](https://user-images.githubusercontent.com/48505700/59357516-f39ee180-8d65-11e9-9829-3197e71450b4.jpg)  
- ![2](https://user-images.githubusercontent.com/48505700/59357535-fa2d5900-8d65-11e9-94db-ad6750435db2.jpg)  
    
   camera를 실행합니다.  
-  TextureView가 사용이 가능하다면 카메라를 켜는 기능입니다.  
+  TextureView가 사용이 가능하다면 카메라를 실행합니다.  
+ 
+ ![2](https://user-images.githubusercontent.com/48505700/59357535-fa2d5900-8d65-11e9-94db-ad6750435db2.jpg)  
   
   camera2의 여러 클래스  
     
+  Camera를 켜기 위해 OpenCamera를 사용했습니다.
     
   ![3](https://user-images.githubusercontent.com/48505700/59357543-00233a00-8d66-11e9-952a-dc9e9f0b0aef.jpg)  
-    
-    
-  Camera를 켜기 위해 OpenCamera를 사용했습니다.  
+      
         
   ![4](https://user-images.githubusercontent.com/48505700/59357558-06b1b180-8d66-11e9-975a-54366fb805cb.jpg)  
   
   CameraDevice는 Camera 기기를 나타내고 CameraManager는 Camera의 기능을 시키는 요소입니다.  
     
-  캡쳐 버튼에 inclick을 통해 takePicture method를 실행합니다.  
     
     
   ![5](https://user-images.githubusercontent.com/48505700/59357571-0ca79280-8d66-11e9-9346-b2c1e078f316.jpg)    
+  
+  캡쳐 버튼에 onclick을 통해 takePicture method를 실행합니다.  
+  
   ![6](https://user-images.githubusercontent.com/48505700/59357595-14673700-8d66-11e9-90ec-710c98c87f97.jpg)  
   ![7](https://user-images.githubusercontent.com/48505700/59357601-1a5d1800-8d66-11e9-814b-694779eeb951.jpg)     
   ![8](https://user-images.githubusercontent.com/48505700/59357618-20eb8f80-8d66-11e9-9f3b-ba8447ced251.jpg)  
@@ -123,7 +130,8 @@
  
 ## Tensorflow lite와 TTS  
 
-* Tensorflow lite는 Mobile, Embedded device와 같이 한정 된 자원을 갖는 디바이스에서 on-device learning을 하기 위한 경량화 된 솔루션이다. 짧은 대기 시간과 작은 바이너리 크기로 디바이스 내에서 기계학습 유추가 가능합니다.    
+* Tensorflow lite는 Mobile, Embedded device와 같이 한정 된 자원을 갖는 디바이스에서 on-device learning을 하기 위한 경량화 된 솔루션입니다
+. 짧은 대기 시간과 작은 바이너리 크기로 디바이스 내에서 기계학습 유추가 가능합니다.    
 * 이미지를 bitmap 형태로 변환하여 classifier.recognizeImage에 전달해 인식 결과를 저장합니다.  
  그 후 결과를 String형으로 변환해 결과창에 출력합니다.  
    
@@ -133,11 +141,11 @@
    
  ![2](https://user-images.githubusercontent.com/48505700/59359010-90fb1500-8d68-11e9-8249-9a4a1096b721.jpg)  
    
- 마지막으로 uiThread를 통해 카메라 미리보기와 인식 결과를 띄워줍니다.  
+ 마지막으로 UiThread를 통해 카메라 미리보기와 인식 결과를 띄워줍니다.  
      
 ![3](https://user-images.githubusercontent.com/48505700/59359018-95273280-8d68-11e9-8a15-e3772684a72e.jpg)  
   
-  ondestroy에서 카메라와 background에서 진행하던 카메라, tensorflow 모두 실행 중지 시켜주고, TTS 또한 실행 중지 시켜 앱 실행을 멈춘 후에도 다시 TTS가 실행 될 수 있게 합니다.  
+  ondestroy에서 카메라와 background에서 진행하던 카메라, tensorflow 모두 실행 중지 시켜줍니다. 또한 TTS도 실행 중지 시켜 앱 실행을 멈춘 후에도 다시 TTS가 실행 될 수 있게 합니다.  
     
     
  ![4](https://user-images.githubusercontent.com/48505700/59359028-99535000-8d68-11e9-87c0-9b434cd56e30.jpg)  
@@ -149,7 +157,7 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
   
  ![5](https://user-images.githubusercontent.com/48505700/59359046-9f493100-8d68-11e9-95c0-e8cae643b6d7.jpg)  
   
- oncreate()에 TTS실행을 위한 기본 속성을 설정합니다. (ex. 읽는 속도, 언어)    
+ oncreate에 TTS실행을 위한 기본 속성을 설정합니다. (ex. 읽는 속도, 언어)    
    
  ![6](https://user-images.githubusercontent.com/48505700/59359070-a708d580-8d68-11e9-9c88-4d03cda1cea9.jpg)  
    
@@ -160,7 +168,7 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
 ## Database 연동  
 
 * 안드로이드 스튜디오와 DB를 바로 연결 할 수 없기 때문에 PHP파일을 사용하여 안드로이드 스튜디오와 DB를 연결합니다.
-* Register.php는 회원가입에 필요한 정보들을 데이터베이스에 저장합니다.  
+* Register.php는 회원가입에 필요한 정보들을 안드로이드 스튜디오에서 받아 데이터베이스에 저장합니다.  
   
   registerButton 부분  
   ![3](https://user-images.githubusercontent.com/48505700/59361279-9195aa80-8d6c-11e9-8b1a-3d08d760655d.JPG)  
@@ -242,7 +250,7 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
   단어가져오는 getData()메소드  
   ![6](https://user-images.githubusercontent.com/48505700/59361319-a2deb700-8d6c-11e9-9508-eaa2d7f0e220.JPG)  
     
-  단어가져오는 fetchWord코드  
+  단어가져오는 fetchWord.php 파일  
   ![7](https://user-images.githubusercontent.com/48505700/59361338-ac681f00-8d6c-11e9-8e7d-203909bace18.JPG)  
     
  ### Dictionary Api  
@@ -260,7 +268,7 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
      
    ![2](https://user-images.githubusercontent.com/48505700/59366892-002b3600-8d76-11e9-9090-e1e09ff019bf.jpg)  
      
-   get /entries/{source_lang}/{word_id} 클릭 시  
+   get /entries/{source_lang}/{word_id} 클릭
      
    ![3](https://user-images.githubusercontent.com/48505700/59366904-04efea00-8d76-11e9-9cb5-1cd4b429d122.jpg)  
      
@@ -269,7 +277,7 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
    ![4](https://user-images.githubusercontent.com/48505700/59366915-091c0780-8d76-11e9-815a-49ff8f42f797.jpg)  
    ![5](https://user-images.githubusercontent.com/48505700/59366925-0f11e880-8d76-11e9-9b16-c960608b5e4d.jpg)  
       
-   my_app_id 와 key에 코드 밑에 발급 받은 키와 id를 입력합니다.  
+   my_app_id 와 key에 코드 아래 발급 받은 키와 id를 입력합니다.  
      
    ![6](https://user-images.githubusercontent.com/48505700/59366935-13d69c80-8d76-11e9-9036-21a2ee17d1b1.jpg)  
      
@@ -298,3 +306,7 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
 * 음성 버튼을 통해 사물의 이름을 TTS로 읽어주고 저장 버튼을 누르면 사용자 계정에 그 단어가 저장됩니다.  
 * Dictionary는 Dictection의 기능을 사용하면서 학습중인 사용자가 모르는 단어가 생겼을 경우 검색을 통해 단어의 뜻을 익히고 사용자의 회원 정보 관리와 Detection에서 저장한 단어를 열람 할 수 있습니다.  
 * My page 에서는 사용자의 회원 정보 열람 및 수정이 가능합니다.  
+
+## 기대효과  
+
+* 정보 통신 시대에 걸맞는 기술을 아이들이 자연스레 접할 수 있고, 시간과 장소에 구애 받지 않고 자기주도 학습이 가능합니다.  
