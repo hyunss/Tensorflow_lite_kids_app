@@ -61,7 +61,7 @@
   
 ## Tensorflow 구현  
 
-* Executor thread 사용  
+#### Executor thread 사용  
 
 ![dd](https://user-images.githubusercontent.com/48505700/59356022-095ed780-8d63-11e9-856b-a5eaecd239f2.jpg)  
   
@@ -80,7 +80,7 @@
 ![1](https://user-images.githubusercontent.com/48505700/59356550-031d2b00-8d64-11e9-9bde-57015725fb65.jpg)  
 ![2](https://user-images.githubusercontent.com/48505700/59356569-0a443900-8d64-11e9-9590-fb6107fb2540.jpg)  
   
- 미리 정의 한 excutor thread를 run하여 Classifier에 tensorflow 모델 전달 합니다.  
+미리 정의 한 excutor thread를 run하여 Classifier에 tensorflow 모델 전달 합니다.  
    
    
  ![3](https://user-images.githubusercontent.com/48505700/59356575-0fa18380-8d64-11e9-8073-8bc6942347ab.jpg)  
@@ -89,8 +89,9 @@
 
 ![4](https://user-images.githubusercontent.com/48505700/59356583-162ffb00-8d64-11e9-84a4-87678f56d4c4.jpg)  
   
-* 카메라  
- 카메라 2의 API는 사용자가 직접 작성한 포맷으로 미처리의 화소 데이터를 캡처 할 수 있습니다.  
+* Camera  
+  
+ Camera 2의 API는 사용자가 직접 작성한 포맷으로 미처리의 화소 데이터를 캡처 할 수 있습니다.  
  oncreate 함수에서 Manifest파일에 camera permission이 허용되어 있는 지 확인 후  
    
  ![1](https://user-images.githubusercontent.com/48505700/59357516-f39ee180-8d65-11e9-9829-3197e71450b4.jpg)  
@@ -105,11 +106,11 @@
   ![3](https://user-images.githubusercontent.com/48505700/59357543-00233a00-8d66-11e9-952a-dc9e9f0b0aef.jpg)  
     
     
-  카메라를 켜기 위해 OpenCamera를 사용했습니다.  
+  Camera를 켜기 위해 OpenCamera를 사용했습니다.  
         
   ![4](https://user-images.githubusercontent.com/48505700/59357558-06b1b180-8d66-11e9-975a-54366fb805cb.jpg)  
   
-  CameraDevice는 카메라 기기를 나타내고 CameraManager는 카메라의 기능을 시키는 요소입니다.  
+  CameraDevice는 Camera 기기를 나타내고 CameraManager는 Camera의 기능을 시키는 요소입니다.  
     
   캡쳐 버튼에 inclick을 통해 takePicture method를 실행합니다.  
     
@@ -174,12 +175,13 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
 * UserValidate.php는 아이디 중복을 확인합니다.  
 * Login.php는 입력된 아이디와 비밀번호가 회원테이블에 존재하는지 확인후 로그인합니다.  
   
-  Login.php  
-  
+  Login.php   
   ![12](https://user-images.githubusercontent.com/48505700/59361410-c3a70c80-8d6c-11e9-9b46-0021755181eb.JPG)  
     
 안드로이드에서 POST방식으로 받아온 아이디와 비밀번호 값을 SQL문을 이용해 PHP에서 회원인지 아닌지 검사하고 TRUE값을 안드로이드로 전송합니다.  
-  ## 자동로그인  
+  
+  
+  ### 자동로그인  
   * SharedPreferences는 DB를 사용하기 애매한 경우에 유용한 API.  
   * LoginActivity에서 조건문을 주어 SharedPreferences에 일정한 값이 저장되어있으면 MenuActivity로 이동합니다.  
   * 처음에는 SharedPreferences에 어떤 정보도 없으므로 값을 저장할 키들을 생성합니다.  
@@ -204,7 +206,7 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
    
    
     
-  ## 로그아웃  
+  ### 로그아웃  
     
  * 로그아웃 버튼을 클릭하면 SharedPreferences에 저장된 정보를 삭제하기 위해 SharedPreferences를 LoginActivity에서 만든 이름으로 불러온다. 
  * editor.clear()를 사용해 auto에 들어있는 모든 정보를 기기에서 지운다.  
@@ -243,7 +245,7 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
   단어가져오는 fetchWord코드  
   ![7](https://user-images.githubusercontent.com/48505700/59361338-ac681f00-8d6c-11e9-8e7d-203909bace18.JPG)  
     
-* Dictionary Api  
+ ### Dictionary Api  
   OXFORD Dictionary api 사용  
   Oxford dictionary : 영국 옥스포드 대학교의 영어사전  
   최근 온라인 사전 수요 증가 추세로 인터넷, 휴대폰 등에서 사전탑재 환경 구축이 활발해졌습니다.  
@@ -252,13 +254,42 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
  [Download link] (https://developer.oxforddictionaries.com) 에서 prototype api key를 생성함과
  동시에 회원가입 -> 회원가입한 계정으로 로그인 시 application ID가 발급되어 있습니다.  
    
-   
- 
-  
-  
-    
-    
-
+   ![1](https://user-images.githubusercontent.com/48505700/59366875-f7d2fb00-8d75-11e9-8b1b-0c50ec31e4e8.jpg)  
+     
+   로그인 후 메뉴 -> documentation -> V2 swagger docs -> 밑으로 스크롤  
+     
+   ![2](https://user-images.githubusercontent.com/48505700/59366892-002b3600-8d76-11e9-9090-e1e09ff019bf.jpg)  
+     
+   get /entries/{source_lang}/{word_id} 클릭 시  
+     
+   ![3](https://user-images.githubusercontent.com/48505700/59366904-04efea00-8d76-11e9-9cb5-1cd4b429d122.jpg)  
+     
+   android studio app id, app key등록  
+     
+   ![4](https://user-images.githubusercontent.com/48505700/59366915-091c0780-8d76-11e9-815a-49ff8f42f797.jpg)  
+   ![5](https://user-images.githubusercontent.com/48505700/59366925-0f11e880-8d76-11e9-9b16-c960608b5e4d.jpg)  
+      
+   my_app_id 와 key에 코드 밑에 발급 받은 키와 id를 입력합니다.  
+     
+   ![6](https://user-images.githubusercontent.com/48505700/59366935-13d69c80-8d76-11e9-9036-21a2ee17d1b1.jpg)  
+     
+   AndroidManifest.xml파일에 인터넷 퍼미션 추가  
+     
+   ![7](https://user-images.githubusercontent.com/48505700/59366949-1a651400-8d76-11e9-9402-8a73594f3716.jpg)  
+     
+   url 정의  
+     
+   ![8](https://user-images.githubusercontent.com/48505700/59366964-205af500-8d76-11e9-90c9-56c6b0b689a0.jpg)  
+     
+   결과 요청  
+     
+   ![9](https://user-images.githubusercontent.com/48505700/59366973-24871280-8d76-11e9-9c0d-12dc895794ff.jpg)  
+     
+   결과 받아오기( JsonArray 형태 )  
+     
+   ![10](https://user-images.githubusercontent.com/48505700/59366981-28b33000-8d76-11e9-99fe-48932d4c4785.jpg)  
+     
+      
 ## 어플사용  
 
 * Join을 통해 부모가 자녀 계정을 만듭니다.  
