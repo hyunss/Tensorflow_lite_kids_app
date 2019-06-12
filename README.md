@@ -68,10 +68,30 @@
 ![4](https://user-images.githubusercontent.com/48505700/59356583-162ffb00-8d64-11e9-84a4-87678f56d4c4.jpg)  
   
 * 카메라  
-
-
-
-
+ 카메라 2의 API는 사용자가 직접 작성한 포맷으로 미처리의 화소 데이터를 캡처 할 수 있습니다.  
+ oncreate 함수에서 Manifest파일에 camera permission이 허용되어 있는 지 확인 후  
+   
+ ![1](https://user-images.githubusercontent.com/48505700/59357516-f39ee180-8d65-11e9-9829-3197e71450b4.jpg)  
+ ![2](https://user-images.githubusercontent.com/48505700/59357535-fa2d5900-8d65-11e9-94db-ad6750435db2.jpg)  
+   
+  camera를 실행합니다.  
+  TextureView가 사용이 가능하다면 카메라를 켜는 기능입니다.  
+  
+  camera2의 여러 클래스  
+  ![3](https://user-images.githubusercontent.com/48505700/59357543-00233a00-8d66-11e9-952a-dc9e9f0b0aef.jpg)  
+  카메라를 켜기 위해 OpenCamera를 사용했습니다.  
+  ![4](https://user-images.githubusercontent.com/48505700/59357558-06b1b180-8d66-11e9-975a-54366fb805cb.jpg)  
+  
+  CameraDevice는 카메라 기기를 나타내고 CameraManager는 카메라의 기능을 시키는 요소입니다.  
+    
+  캡쳐 버튼에 inclick을 통해 takePicture method를 실행합니다.    
+  ![5](https://user-images.githubusercontent.com/48505700/59357571-0ca79280-8d66-11e9-9346-b2c1e078f316.jpg)    
+  ![6](https://user-images.githubusercontent.com/48505700/59357595-14673700-8d66-11e9-90ec-710c98c87f97.jpg)  
+  ![7](https://user-images.githubusercontent.com/48505700/59357601-1a5d1800-8d66-11e9-814b-694779eeb951.jpg)     
+  ![8](https://user-images.githubusercontent.com/48505700/59357618-20eb8f80-8d66-11e9-9f3b-ba8447ced251.jpg)  
+    
+    
+   
 ## Tensorflow lite와 TTS  
 
 * Tensorflow lite는 Mobile, Embedded device와 같이 한정 된 자원을 갖는 디바이스에서 on-device learning을 하기 위한 경량화 된 솔루션이다. 짧은 대기 시간과 작은 바이너리 크기로 디바이스 내에서 기계학습 유추가 가능합니다.  
