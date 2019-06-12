@@ -48,15 +48,28 @@
 ![dd](https://user-images.githubusercontent.com/48505700/59356022-095ed780-8d63-11e9-856b-a5eaecd239f2.jpg)  
   
 * Executor 프레임웍은 다음과 같은 특징을 갖습니다.  
-1.쓰레드 풀을 사용  
-2.무거운 쓰레드는 미리 할당 가능  
-3.태스크와 쓰레드를 생성하고 관리하는 것을 분리  
-4.쓰레드 풀안의 쓰레드는 한번해 하나씩 여러 태스크를 실행  
-5.태스크 큐를 이용해 태스크를 관리  
-6.Executor Service를 더이상 필요 없으면 중지  
-7.Executor Service가 멈추면 모든 쓰레드도 중지  
+1. 쓰레드 풀을 사용합니다.  
+2. 무거운 쓰레드는 미리 할당 가능합니다.  
+3. 태스크와 쓰레드를 생성하고 관리하는 것을 분리합니다.  
+4. 쓰레드 풀안의 쓰레드는 한번해 하나씩 여러 태스크를 실행합니다.  
+5. 태스크 큐를 이용해 태스크를 관리합니다.  
+6. Executor Service를 더이상 필요 없으면 중지합니다.  
+7. Executor Service가 멈추면 모든 쓰레드도 중지합니다.  
   
-* asset폴더에 있는 tensorflow lite 라이브러리 변수에 정의  
+* asset폴더에 있는 tensorflow lite 라이브러리 변수에 정의합니다.  
+![1](https://user-images.githubusercontent.com/48505700/59356550-031d2b00-8d64-11e9-9bde-57015725fb65.jpg)  
+![2](https://user-images.githubusercontent.com/48505700/59356569-0a443900-8d64-11e9-9590-fb6107fb2540.jpg)  
+  
+ 미리 정의 한 excutor thread를 run하여 Classifier에 tensorflow 모델 전달 합니다.  
+ ![3](https://user-images.githubusercontent.com/48505700/59356575-0fa18380-8d64-11e9-8073-8bc6942347ab.jpg)  
+   
+분류가 완료 되었을 시 Claasifier를 닫습니다.  
+
+![4](https://user-images.githubusercontent.com/48505700/59356583-162ffb00-8d64-11e9-84a4-87678f56d4c4.jpg)  
+  
+* 카메라  
+
+
 
 
 ## Tensorflow lite와 TTS  
