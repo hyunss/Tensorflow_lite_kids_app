@@ -187,39 +187,22 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
   * 키는 원하는 것으로 설정하고, 값은 null을 줍니다.  
     
     
-       SharedPreferences auto = getSharedPreferences("auto ", Activity .MODE_PRIVATE );  
-       loginID = auto .getString("inputID ", null );  
-       loginPW = auto .getString("inputPW ", null );  
+    ![1](https://user-images.githubusercontent.com/48505700/59365820-2d76e480-8d74-11e9-9690-75ad960757cc.PNG)
+     
        
   * LoginActivity로 들어왔을 때 loginID와 loginPW값을 가져와서 null이 아니면 (첫 로그인이 아닌 경우) 자동 로그인이 되어 MenuActivity가 실행됩니다.  
     
     
-     if (loginID !=null &&loginPW !=null ){
-                 Toast.makeText(LoginActivity　.this, LoginID + "님 자동로그인입니다.",)Toast
-    .LENGTH_SHORT).show();
-	     Intent intent =new Intent (LoginActivity .this ,MenuActivity .class);
-	     intent .putExtra("userID ", loginID);
-	     startActivity(intent);
-	     finish();
-   }  
-     
+![2](https://user-images.githubusercontent.com/48505700/59365827-31a30200-8d74-11e9-9854-8e73a591a2c6.PNG)  
+  
+  
  * loginID값과 loginPW값이 둘 다 null인 경우(최초 로그인) SharedPreferences.Editor를 통해 auto의 loginID와 loginPW에 값을 저장합니다.  
    이때 저장된 loginID값과 loginPW값으로 앱을 재실행 시 자동로그인이 구현됩니다.  
      
      
-
-   if (loginID ==null && loginPW ==null ) {
-	             SharedPreferences auto = getSharedPreferences("auto ", Activity .MODE_PRIVATE );
-	             SharedPreferences .Editor autoLogin = auto .edit();
-	             autoLogin .putString("inputID ", idText .getText().toString());
-	             autoLogin .putString("inputPW ", passwordText .getText().toString());
-	             autoLogin .commit();
-	             Toast .makeText(LoginActivity .this , idText .getText().toString() +"님 환영합니다.", Toast
-       .LENGTH_SHORT ).show();
-	             Intent intent =new Intent (LoginActivity .this , MenuActivity .class);
-	             startActivity(intent);
-	             finish();
-  }  
+ ![3](https://user-images.githubusercontent.com/48505700/59365836-3667b600-8d74-11e9-95a8-50a9b15822d7.PNG)  
+   
+   
     
   ## 로그아웃  
     
@@ -228,31 +211,10 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
  * Intent를 사용해 LoginActivity로 돌아간다.  
     
     
-  logout_btn .setOnClickListener(new View .OnClickListener () {
-	            @Override
-            	public void onClick (View v ) {
-                    		Intent i =new Intent (MypageActivity .this , LoginActivity .class);
-	                    	startActivity(i);
-		                    SharedPreferences auto = getSharedPreferences("auto ", Activity .MODE_PRIVATE 
-                 );
-	                    	SharedPreferences .Editor editor = auto .edit();
-	              	editor .clear();
-	              	editor .commit();
-	              	Toast .makeText(MypageActivity .this , "로그아웃 ", Toast .LENGTH_SHORT ).show();
-		finish();
-	}  
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
+![4](https://user-images.githubusercontent.com/48505700/59365845-3b2c6a00-8d74-11e9-9258-89b4782b7936.PNG)  
+  
+  
+ 
 * Identi_ID.php는 회원가입 당시 입력했던 이메일이 회원테이블에 존재하는 확인하고 존재한다면 해당 이메일에 회원의 아이디를 전송합니다.  
 * Identification.php는 입력받은 아이디를 회원테이블에서 확인후 값이 존재하면 해당 아이디 회원의 이메일주소로 인증번호를 전송합니다.  
   
@@ -280,6 +242,20 @@ TTS 활용 : 운전 중 문자를 읽음, 시각 장애인을 위한 안내 음�
     
   단어가져오는 fetchWord코드  
   ![7](https://user-images.githubusercontent.com/48505700/59361338-ac681f00-8d6c-11e9-8e7d-203909bace18.JPG)  
+    
+* Dictionary Api  
+  OXFORD Dictionary api 사용  
+  Oxford dictionary : 영국 옥스포드 대학교의 영어사전  
+  최근 온라인 사전 수요 증가 추세로 인터넷, 휴대폰 등에서 사전탑재 환경 구축이 활발해졌습니다.  
+    
+ * OXFORD Dictionary api 사용법  
+ [Download link] (https://developer.oxforddictionaries.com) 에서 prototype api key를 생성함과
+ 동시에 회원가입 -> 회원가입한 계정으로 로그인 시 application ID가 발급되어 있습니다.  
+   
+   
+ 
+  
+  
     
     
 
