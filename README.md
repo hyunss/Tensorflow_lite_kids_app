@@ -55,9 +55,7 @@
 * Tensorflow 모델을 모바일, 임베디드, IoT 디바이스 등에서 실행하기 위한 툴입니다.  
   Tensorflow lite는 각기 다른 정확도와 속도를 가지고 있는 5개의 모델을 제공 합니다.  
 * Tensorflow Lite 목적 : 단순히 모델 훈련이 아닌 모바일 환경에서 낮은 복잡도와 적은 용량의 모델 구동입니다.  
-* Tensorflow Lite의 장점 : 낮은 지연시간, 작은 바이너리 크기, 디바이스 상에서의 머신러닝 추론 가능합니다.  
-머신러닝이나 텐서플로우에 대한 개념이 없더라도 라이브러리 형태로 손쉽게 사용할 수 있습니다.  
-직접 사용자 데이터를 업로드 해 학습을 하여, 내 시나리오에 맞는 Object Detection System을 손쉽게 만들 수 있습니다.  
+* Tensorflow Lite의 장점 : 낮은 지연시간, 작은 바이너리 크기, 디바이스 상에서의 머신러닝 추론 가능합니다.   
 
 ![co](https://user-images.githubusercontent.com/48505700/59355648-54c4b600-8d62-11e9-9b11-64ec2c4f1e4f.jpg)  
   
@@ -83,12 +81,12 @@
 ![1](https://user-images.githubusercontent.com/48505700/59356550-031d2b00-8d64-11e9-9bde-57015725fb65.jpg)  
 ![2](https://user-images.githubusercontent.com/48505700/59356569-0a443900-8d64-11e9-9590-fb6107fb2540.jpg)  
   
-미리 정의 한 excutor thread를 run하여 Classifier에 tensorflow 모델 전달 합니다.  
+미리 정의 한 excutor thread를 실하여 Classifier에 tensorflow 모델 전달 합니다.  
    
    
  ![3](https://user-images.githubusercontent.com/48505700/59356575-0fa18380-8d64-11e9-8073-8bc6942347ab.jpg)  
    
-분류가 완료 되었을 시 Claasifier를 닫습니다.  
+분류가 완료 되었을 시 Clasifier를 닫습니다.  
 
 ![4](https://user-images.githubusercontent.com/48505700/59356583-162ffb00-8d64-11e9-84a4-87678f56d4c4.jpg)  
   
